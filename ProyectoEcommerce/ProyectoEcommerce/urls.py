@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ProyectoEcommerce.views import welcome_page
+from Products.views import create_product,list_products
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home', welcome_page),
+    path('create-product', create_product),
+    path('product-list', list_products)
 ]
