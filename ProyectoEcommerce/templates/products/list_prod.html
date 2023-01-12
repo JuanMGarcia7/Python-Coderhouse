@@ -20,9 +20,15 @@
 <div class="card" style="width: 30%; float: left; margin: 20px; margin-top: 5%">
   <img src="..." class="card-img-top" alt="Not image yet" />
   <div class="card-body">
-    <p class="card-text">{{product.name}}</p>
-    <p class="card-text">{{product.price}}</p>
-    <p class="card-text">{{product.category}}</p>
+    <p class="card-text">
+      <span class="font-weight-bold">Nombre:</span> {{product.name}}
+    </p>
+    <p class="card-text">
+      <span class="font-weight-bold">Precio:</span> {{product.price}}
+    </p>
+    <p class="card-text">
+      <span class="font-weight-bold">Categoria:</span> {{product.category}}
+    </p>
 
     {% if product.stock %}
 
