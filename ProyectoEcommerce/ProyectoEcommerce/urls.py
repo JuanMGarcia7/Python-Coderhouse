@@ -6,6 +6,7 @@ from ProyectoEcommerce.views import welcome_page,our_company
  """
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', welcome_page),
     path('home', welcome_page),
     path('nosotros', our_company),
     path('Products/', include('Products.urls')),
