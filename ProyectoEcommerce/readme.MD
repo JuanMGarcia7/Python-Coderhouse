@@ -28,5 +28,6 @@ Del lado de admin deberiamos crear un superuser utilizando los comandos en la co
 ## Autor
 
 - Juan Manuel Garcia
+Video explicativo para la entrega: https://drive.google.com/drive/folders/10qG2wdQ6JuT3OMRm8hx8ntZAc1PKyavS?usp=sharing
     Espero que les sea util y facil de navegar! 
     Gracias y saludos!
