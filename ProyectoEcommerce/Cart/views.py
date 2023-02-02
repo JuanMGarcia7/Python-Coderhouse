@@ -12,9 +12,10 @@ def create_cart(request):
         return render(request, 'cart/cart.html', context=context)
     elif request.method == 'POST':
         form = CartForm(request.POST)
+        user = request.user.username
         if form.is_valid():
             Cart.objects.create( 
-            username =  form.cleaned_data['username'],
+            username =  user,
             products =  form.cleaned_data['products'])
             context = {
                 'message': 'Carro creada exitosamente'
@@ -27,8 +28,8 @@ def create_cart(request):
             }
             return render(request, 'cart/cart.html', context=context)
 
-def list_of_carts(request):
-    list_of_carts = Cart.objects.all()
+def list_of_carts(request):   
+    list_of_carts = Cart.objects.filter(username=request.user.username) 
     context={
         'list_of_carts':list_of_carts
     }

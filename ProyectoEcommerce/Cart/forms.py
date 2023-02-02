@@ -1,5 +1,12 @@
 from django import forms
+from Products.models import Products
 
-class CartForm(forms.Form):
-    username = forms.CharField(max_length=100, label="Usuario")
-    products = forms.CharField(max_length=100, label="Productos")
+list_of_products = Products.objects.all()
+CHOICES = []
+
+class CartForm(forms.Form): 
+    for prod in list_of_products:
+        CHOICES.append((prod.name, prod.name),)
+
+    tuple_of_products = tuple(CHOICES)
+    products = forms.ChoiceField(choices=tuple_of_products, label="Productos",required=True)

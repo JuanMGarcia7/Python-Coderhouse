@@ -22,11 +22,10 @@
     </p>
   </div>
 </div>
-{% endfor%}
+{% endfor%} {% if request.user.is_authenticated %}
 <div class="btn-container">
   <a href="/cart/cart">
     <button class="btn-gral">Crear un nuevo carro de compras</button>
   </a>
 </div>
-
-{% endblock %}
+{% endif %} {% endblock %}
