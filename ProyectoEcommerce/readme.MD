@@ -1,10 +1,13 @@
-# Proyecto Final Python - Entrega N°1
+# Proyecto Final Python - Entrega Final
 
-Proyecto para el curso de Python de Coder House. 
+Proyecto para el curso de Python de Coder House, con el profesor Luca Cittá Giordano.
 Voy a crear un ecommerce, relacionado a la venta de productos para la computadora
+
 ## Para iniciarlo
 
 Situarnos en la carpeta "ProyectoEcommerce", y ejectuar el comando - python manage.py runserver
+Previamente nos aseguramos tener instalado django,y demas frameworks necesarios.
+
 
 ## Navegacion
 
@@ -15,6 +18,11 @@ Ejemplos de urls para navegar sin ir al home:
 "Products/list-categories/"
 "/nosotros"
 "/cart/list-of-carts/"
+
+## Rangos
+No todos los usuarios van a tener los mismos accesos, ya que no es lo mismo la pagina para un usuario "admin", que para un cliente. En el caso de querer registrarnos como un cliente comun, vamos al signup, los hacemos normalmente y ya podemos inciar sesion!
+
+Del lado de admin deberiamos crear un superuser utilizando los comandos en la consola de visual. (python manage.py createsuperuser). En donde tendremos un panel de adminsitracion (personalizado, y otro de django en la url /admin), que nos permitira editar, y eliminar cosas!
 
 
 ## Autor
